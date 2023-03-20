@@ -1,0 +1,15 @@
+--Clothing Store Inventory Database 
+
+CREATE TABLE Clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, total INTEGER);
+
+INSERT INTO Clothing VALUES (1, "Tops", 6, 12, 72);
+INSERT INTO Clothing VALUES (2, "Pants", 5, 25, 125);
+INSERT INTO Clothing VALUES (3, "Shorts", 3, 12, 36);
+INSERT INTO Clothing VALUES (4, "Skirts", 2, 10, 20);
+INSERT INTO Clothing VALUES (5, "Sweater", 1, 20, 20);
+
+--Display most expensive item in order to least expensive item
+SELECT * FROM Clothing ORDER BY price DESC;
+
+--What is the total revenue if I sold all the clothing items?
+SELECT SUM(total) FROM Clothing;
